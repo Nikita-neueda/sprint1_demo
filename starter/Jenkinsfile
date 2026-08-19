@@ -19,7 +19,9 @@ pipeline {
         }
         stage('Test') {
             steps {
+                dir('/var/lib/jenkins/workspace/sprint1test1/starter') {
                 sh 'mvn -B test'
+                }
             }
             post {
                 always {
