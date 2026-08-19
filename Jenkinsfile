@@ -1,5 +1,9 @@
 pipeline {
     agent any
+     tools {
+        // This injects the Java 21 paths you configured in Step 1
+        jdk 'JDK21'
+    }
     stages {
         stage('Checkout') {
             steps {
