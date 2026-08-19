@@ -8,7 +8,9 @@ pipeline {
         }
         stage('Build') {
             steps {
+		 dir('/var/lib/jenkins/workspace/sprint1test1/starter') {
                 sh 'mvn -f ./pom.xml -B clean package'
+}
             }
         }
         stage('Test') {
