@@ -1,10 +1,9 @@
 package com.neueda.leap;
 
 public class Main {
-    public static void main(String[] args) throws InterruptedException {
-        Greeter greeter = new Greeter();
-        System.out.println(greeter.greet("Sprint 1"));
-        System.out.println("Container is up. Sleeping so you can docker ps / docker logs / docker exec into it.");
-        Thread.sleep(600_000);
+
+    public static void main(String[] args) {
+        // TODO: replace <team-name> with your team's actual name
+        System.out.println("Hello world from the firm's Sprint 1 project skeleton");
     }
 }
