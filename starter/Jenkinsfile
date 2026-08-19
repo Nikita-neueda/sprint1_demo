@@ -20,12 +20,12 @@ pipeline {
         stage('Test') {
             steps {
                 dir('/var/lib/jenkins/workspace/sprint1test1/starter') {
-                sh 'mvn -B test'
+                sh 'mvn -f ./pom.xml -B test'
                 }
             }
             post {
                 always {
-                    junit 'target/test-reports/*.xml'
+                    junit 'target/surefire-reports/*.xml'
                 }
             }
         }
