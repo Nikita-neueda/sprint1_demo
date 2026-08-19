@@ -34,7 +34,7 @@
                     <manifest>
                         <addClasspath>true</addClasspath>
                         <!-- REPLACE WITH YOUR ACTUAL MAIN CLASS PATH -->
-                        <mainClass>com.neueda.leap.TeamSkeletonApplication</mainClass> 
+                        <mainClass>com.neueda.leap.Main</mainClass> 
                     </manifest>
                 </archive>
                 </configuration>
