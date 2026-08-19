@@ -30,6 +30,13 @@
                 <configuration>
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
+                                    <archive>
+                    <manifest>
+                        <addClasspath>true</addClasspath>
+                        <!-- REPLACE WITH YOUR ACTUAL MAIN CLASS PATH -->
+                        <mainClass>com.neueda.leap.TeamSkeletonApplication</mainClass> 
+                    </manifest>
+                </archive>
                 </configuration>
             </plugin>
             <plugin>
