@@ -73,7 +73,7 @@ RUN echo "host all all 10.9.0.0/16 scram-sha-256" >> /usr/share/postgresql/5432/
 RUN echo '#!/bin/bash\necho "host all all 10.9.0.0/16 scram-sha-256" >> "$PGDATA/pg_hba.conf"' > /docker-entrypoint-initdb.d/01-restrict-ip.sh \
     && chmod +x /docker-entrypoint-initdb.d/01-restrict-ip.sh
 
-ARG SCHEMA_PATH=entrprise_demo.schema
+ARG SCHEMA_PATH=enterprise-schema.sql
 
 COPY ${SCHEMA_PATH} /docker-entrypoint-initdb.d/02-myschema.sql
 
@@ -83,7 +83,7 @@ EXPOSE 5432
 ```
 # 1. Docker build command
 ```
-docker build --build-arg SCHEMA_PATH="entrprise_demo.schema" -t my-postgres-15 .
+docker build --build-arg SCHEMA_PATH="enterprise-schema.sql" -t my-postgres-15 .
 ```
 # 2. Launch the new container with the custom DB name
 ```
